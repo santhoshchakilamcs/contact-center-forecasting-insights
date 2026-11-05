@@ -1,0 +1,974 @@
+{
+  "dataset": {
+    "source": "NYC 311 Service Requests from 2010 to Present (data.cityofnewyork.us, dataset erm2-nwe9)",
+    "source_url": "https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9",
+    "license": "Public data published by the City of New York (NYC Open Data)",
+    "n_days": 731,
+    "date_range": "2023-01-01..2024-12-31",
+    "total_contacts": 6681493,
+    "mean_contacts_per_day": 9140.2,
+    "raw_files": {
+      "daily_totals.csv": "731 daily totals (Socrata aggregation)",
+      "daily_by_driver.csv": "10,214 driver-day rows, top 15 drivers",
+      "daily_by_channel.csv": "3,032 channel-day rows",
+      "contacts_sample.csv": "30,470 individual contacts, 2024-01-08..10"
+    }
+  },
+  "forecast": {
+    "total": {
+      "label": "all contacts",
+      "seasonal_naive": {
+        "n_days": 92,
+        "mape": 0.15433078215966806,
+        "wape": 0.15375360397607704,
+        "bias": -0.002049727213464761,
+        "mae": 1527.9565217391305
+      },
+      "calendar_ridge": {
+        "n_days": 92,
+        "mape": 0.1086920671089162,
+        "wape": 0.11083217348888913,
+        "bias": -0.02464527769214532,
+        "mae": 1101.4164086015182
+      },
+      "test_actual_total": 914268,
+      "test_naive_total": 912394.0,
+      "test_ridge_total": 891735.6112549577
+    },
+    "per_driver": [
+      {
+        "label": "Illegal Parking",
+        "seasonal_naive": {
+          "n_days": 92,
+          "mape": 0.10995965205379067,
+          "wape": 0.10406310608406538,
+          "bias": 0.017585605554378474,
+          "mae": 138.80434782608697
+        },
+        "calendar_ridge": {
+          "n_days": 92,
+          "mape": 0.0951475978665139,
+          "wape": 0.08602866144419391,
+          "bias": 0.0611514026581923,
+          "mae": 114.74914304850881
+        },
+        "test_actual_total": 122714,
+        "test_naive_total": 124872.0,
+        "test_ridge_total": 130218.1332257974
+      },
+      {
+        "label": "Noise - Residential",
+        "seasonal_naive": {
+          "n_days": 92,
+          "mape": 0.6419969737503096,
+          "wape": 0.6209803733537911,
+          "bias": -0.0818869070451349,
+          "mae": 844.6413043478261
+        },
+        "calendar_ridge": {
+          "n_days": 92,
+          "mape": 0.403260716918258,
+          "wape": 0.4779802114136734,
+          "bias": -0.18611969420451777,
+          "mae": 650.1362145158852
+        },
+        "test_actual_total": 125136,
+        "test_naive_total": 114889.0,
+        "test_ridge_total": 101845.72594602345
+      },
+      {
+        "label": "HEAT/HOT WATER",
+        "seasonal_naive": {
+          "n_days": 92,
+          "mape": 0.9523725464557352,
+          "wape": 0.671598215457289,
+          "bias": -0.06557538380789923,
+          "mae": 890.1304347826087
+        },
+        "calendar_ridge": {
+          "n_days": 92,
+          "mape": 0.8756575471030171,
+          "wape": 0.5024671694000934,
+          "bias": -0.19106433602852135,
+          "mae": 665.9656170431498
+        },
+        "test_actual_total": 121936,
+        "test_naive_total": 113940.0,
+        "test_ridge_total": 98638.3791220262
+      },
+      {
+        "label": "Blocked Driveway",
+        "seasonal_naive": {
+          "n_days": 92,
+          "mape": 0.09196357316548727,
+          "wape": 0.09091513405716818,
+          "bias": 0.009683137602481719,
+          "mae": 44.59782608695652
+        },
+        "calendar_ridge": {
+          "n_days": 92,
+          "mape": 0.07296246895121769,
+          "wape": 0.07090909036819046,
+          "bias": 0.024108588592187744,
+          "mae": 34.78399182952647
+        },
+        "test_actual_total": 45130,
+        "test_naive_total": 45567.0,
+        "test_ridge_total": 46218.02060316543
+      },
+      {
+        "label": "Noise - Street/Sidewalk",
+        "seasonal_naive": {
+          "n_days": 92,
+          "mape": 0.4521341062951386,
+          "wape": 0.36078213668887243,
+          "bias": 0.07130520602023194,
+          "mae": 127.15217391304348
+        },
+        "calendar_ridge": {
+          "n_days": 92,
+          "mape": 0.4397360003976127,
+          "wape": 0.33605252275159914,
+          "bias": -0.012184003940789652,
+          "mae": 118.43659780106358
+        },
+        "test_actual_total": 32424,
+        "test_naive_total": 34736.0,
+        "test_ridge_total": 32028.945856223836
+      }
+    ],
+    "per_channel": [
+      {
+        "label": "ONLINE",
+        "seasonal_naive": {
+          "n_days": 92,
+          "mape": 0.138257091966049,
+          "wape": 0.13575241644218844,
+          "bias": 0.0028139462454307524,
+          "mae": 540.1086956521739
+        },
+        "calendar_ridge": {
+          "n_days": 92,
+          "mape": 0.0926341544479099,
+          "wape": 0.09413182055755037,
+          "bias": -0.0399873070546957,
+          "mae": 374.51572615176514
+        },
+        "test_actual_total": 366034,
+        "test_naive_total": 367064.0,
+        "test_ridge_total": 351397.2860495415
+      },
+      {
+        "label": "PHONE",
+        "seasonal_naive": {
+          "n_days": 92,
+          "mape": 0.2034119787372264,
+          "wape": 0.19715054707155813,
+          "bias": 0.015124919548300276,
+          "mae": 586.0
+        },
+        "calendar_ridge": {
+          "n_days": 92,
+          "mape": 0.17093549686014917,
+          "wape": 0.1611355047885937,
+          "bias": 0.03697191447040945,
+          "mae": 478.9507673638008
+        },
+        "test_actual_total": 273456,
+        "test_naive_total": 277592.0,
+        "test_ridge_total": 283566.19184342027
+      },
+      {
+        "label": "MOBILE",
+        "seasonal_naive": {
+          "n_days": 92,
+          "mape": 0.3406012202653133,
+          "wape": 0.3711053491009539,
+          "bias": -0.034310103857357305,
+          "mae": 857.1847826086956
+        },
+        "calendar_ridge": {
+          "n_days": 92,
+          "mape": 0.22916413922127038,
+          "wape": 0.27813690126291285,
+          "bias": -0.0904588740504068,
+          "mae": 642.4448470551388
+        },
+        "test_actual_total": 212503,
+        "test_naive_total": 205212.0,
+        "test_ridge_total": 193280.2178876664
+      },
+      {
+        "label": "UNKNOWN",
+        "seasonal_naive": {
+          "n_days": 92,
+          "mape": 0.19265855747344024,
+          "wape": 0.16858336010279473,
+          "bias": 0.004015419209765499,
+          "mae": 114.08695652173913
+        },
+        "calendar_ridge": {
+          "n_days": 92,
+          "mape": 0.165774340024143,
+          "wape": 0.1408642623186919,
+          "bias": 0.062041791145066874,
+          "mae": 95.32835839088867
+        },
+        "test_actual_total": 62260,
+        "test_naive_total": 62510.0,
+        "test_ridge_total": 66122.72191669187
+      }
+    ],
+    "events": [
+      {
+        "name": "Jan 2024 coastal storm (heavy rain and flooding)",
+        "start": "2024-01-09",
+        "end": "2024-01-10",
+        "days": 2,
+        "mean_uplift": 0.08691478724468604,
+        "actual_total": 20708
+      },
+      {
+        "name": "Feb 2024 snowstorm",
+        "start": "2024-02-13",
+        "end": "2024-02-13",
+        "days": 1,
+        "mean_uplift": -0.2216005067567568,
+        "actual_total": 7373
+      },
+      {
+        "name": "Jul 2024 severe thunderstorms",
+        "start": "2024-07-16",
+        "end": "2024-07-16",
+        "days": 1,
+        "mean_uplift": -0.0307663446205797,
+        "actual_total": 10333
+      },
+      {
+        "name": "Remnants of Hurricane Debby",
+        "start": "2024-08-09",
+        "end": "2024-08-09",
+        "days": 1,
+        "mean_uplift": 0.14162900914802168,
+        "actual_total": 10358
+      },
+      {
+        "name": "Nov 2024 wildfire smoke",
+        "start": "2024-11-08",
+        "end": "2024-11-09",
+        "days": 2,
+        "mean_uplift": -0.06087972449933948,
+        "actual_total": 18359
+      }
+    ],
+    "test_error_by_weekday": {
+      "Monday": {
+        "mean_error": -806.426265201133,
+        "n_days": 13
+      },
+      "Tuesday": {
+        "mean_error": -496.82198214823035,
+        "n_days": 14
+      },
+      "Wednesday": {
+        "mean_error": 127.35398763900776,
+        "n_days": 13
+      },
+      "Thursday": {
+        "mean_error": 143.33509468029158,
+        "n_days": 13
+      },
+      "Friday": {
+        "mean_error": 10.911107588858403,
+        "n_days": 13
+      },
+      "Saturday": {
+        "mean_error": -194.1567395710779,
+        "n_days": 13
+      },
+      "Sunday": {
+        "mean_error": -479.2388001334159,
+        "n_days": 13
+      }
+    },
+    "worst_test_days": [
+      {
+        "date": "2024-12-16",
+        "actual": 14536,
+        "forecast": 9820.9,
+        "error_pct": -0.324
+      },
+      {
+        "date": "2024-11-19",
+        "actual": 14547,
+        "forecast": 10162.2,
+        "error_pct": -0.301
+      },
+      {
+        "date": "2024-11-20",
+        "actual": 13821,
+        "forecast": 10089.9,
+        "error_pct": -0.27
+      },
+      {
+        "date": "2024-12-17",
+        "actual": 13364,
+        "forecast": 9917.9,
+        "error_pct": -0.258
+      },
+      {
+        "date": "2024-11-28",
+        "actual": 6512,
+        "forecast": 9777.6,
+        "error_pct": 0.501
+      }
+    ]
+  },
+  "insights": {
+    "driver_mix": {
+      "top_drivers_overall": {
+        "Illegal Parking": 982537,
+        "Noise - Residential": 677749,
+        "HEAT/HOT WATER": 494259,
+        "Blocked Driveway": 336622,
+        "Noise - Street/Sidewalk": 310450,
+        "UNSANITARY CONDITION": 236293,
+        "Noise - Commercial": 136096,
+        "Abandoned Vehicle": 135272,
+        "Street Condition": 135251,
+        "PLUMBING": 127248
+      },
+      "top_driver_share_pct": {
+        "Illegal Parking": 0.2442,
+        "Noise - Residential": 0.1685,
+        "HEAT/HOT WATER": 0.1229,
+        "Blocked Driveway": 0.0837,
+        "Noise - Street/Sidewalk": 0.0772,
+        "UNSANITARY CONDITION": 0.0587,
+        "Noise - Commercial": 0.0338,
+        "Abandoned Vehicle": 0.0336,
+        "Street Condition": 0.0336,
+        "PLUMBING": 0.0316
+      },
+      "monthly_top_driver": {
+        "2023-01": {
+          "Illegal Parking": 0.2449,
+          "HEAT/HOT WATER": 0.1957,
+          "Noise - Residential": 0.1411
+        },
+        "2023-07": {
+          "Illegal Parking": 0.2487,
+          "Noise - Residential": 0.1595,
+          "Noise - Street/Sidewalk": 0.1319
+        },
+        "2024-01": {
+          "HEAT/HOT WATER": 0.2801,
+          "Illegal Parking": 0.2244,
+          "Noise - Residential": 0.1205
+        },
+        "2024-07": {
+          "Illegal Parking": 0.2419,
+          "Noise - Residential": 0.1647,
+          "Noise - Street/Sidewalk": 0.1368
+        }
+      }
+    },
+    "emerging_drivers": {
+      "seasonality_warning": "The recent window is Oct-Dec (heating season) and the prior window is Jul-Sep, so the HEAT/HOT WATER jump (+18.9pp) is mostly seasonality, not a new trend. Compare same-quarter last year before treating a share move as an emerging driver.",
+      "window_recent": "2024-10-03..2024-12-31",
+      "window_prior": "2024-07-05..2024-10-02",
+      "rising": [
+        {
+          "driver": "HEAT/HOT WATER",
+          "share_recent_pct": 0.2089,
+          "share_prior_pct": 0.0197,
+          "change_pp": 18.92
+        },
+        {
+          "driver": "Noise - Residential",
+          "share_recent_pct": 0.2125,
+          "share_prior_pct": 0.1957,
+          "change_pp": 1.68
+        },
+        {
+          "driver": "Noise",
+          "share_recent_pct": 0.0234,
+          "share_prior_pct": 0.026,
+          "change_pp": -0.26
+        },
+        {
+          "driver": "PLUMBING",
+          "share_recent_pct": 0.0287,
+          "share_prior_pct": 0.0323,
+          "change_pp": -0.36
+        },
+        {
+          "driver": "Blocked Driveway",
+          "share_recent_pct": 0.0759,
+          "share_prior_pct": 0.0803,
+          "change_pp": -0.44
+        }
+      ],
+      "falling": [
+        {
+          "driver": "Street Condition",
+          "share_recent_pct": 0.0219,
+          "share_prior_pct": 0.0329,
+          "change_pp": -1.11
+        },
+        {
+          "driver": "Water System",
+          "share_recent_pct": 0.0251,
+          "share_prior_pct": 0.0443,
+          "change_pp": -1.92
+        },
+        {
+          "driver": "UNSANITARY CONDITION",
+          "share_recent_pct": 0.0486,
+          "share_prior_pct": 0.0693,
+          "change_pp": -2.07
+        },
+        {
+          "driver": "Illegal Parking",
+          "share_recent_pct": 0.2055,
+          "share_prior_pct": 0.2447,
+          "change_pp": -3.92
+        },
+        {
+          "driver": "Noise - Street/Sidewalk",
+          "share_recent_pct": 0.0543,
+          "share_prior_pct": 0.1249,
+          "change_pp": -7.05
+        }
+      ]
+    },
+    "channel_shift": {
+      "MOBILE": {
+        "share_recent_pct": 0.2331,
+        "share_prior_pct": 0.2212
+      },
+      "ONLINE": {
+        "share_recent_pct": 0.4003,
+        "share_prior_pct": 0.3949
+      },
+      "PHONE": {
+        "share_recent_pct": 0.2988,
+        "share_prior_pct": 0.309
+      },
+      "UNKNOWN": {
+        "share_recent_pct": 0.0678,
+        "share_prior_pct": 0.0748
+      }
+    },
+    "keywords": {
+      "n_contacts_with_text": 29348,
+      "keywords_by_driver": {
+        "HEAT/HOT WATER": [
+          "entire",
+          "building",
+          "apartment"
+        ],
+        "PAINT/PLASTER": [
+          "ceiling",
+          "wall",
+          "frame",
+          "radiator",
+          "window",
+          "door",
+          "cabinet"
+        ],
+        "DOOR/WINDOW": [
+          "frame",
+          "door",
+          "window",
+          "pane",
+          "dumbwaiter"
+        ],
+        "Noise - Commercial": [
+          "loud",
+          "party",
+          "music",
+          "banging",
+          "pounding",
+          "talking",
+          "truck",
+          "car"
+        ],
+        "Elevator": [
+          "elevator",
+          "property",
+          "single",
+          "device",
+          "alternate",
+          "service",
+          "devices",
+          "multiple"
+        ],
+        "Illegal Parking": [
+          "blocked",
+          "parking",
+          "hydrant",
+          "posted",
+          "sign",
+          "violation",
+          "sidewalk",
+          "double"
+        ],
+        "Noise - Residential": [
+          "banging",
+          "pounding",
+          "loud",
+          "party",
+          "music",
+          "talking",
+          "television"
+        ],
+        "Rodent": [
+          "sighting",
+          "rat",
+          "rodents",
+          "signs",
+          "attracting",
+          "condition",
+          "mouse"
+        ],
+        "FLOORING/STAIRS": [
+          "floor",
+          "stairs"
+        ],
+        "Derelict Vehicles": [
+          "derelict",
+          "vehicles"
+        ],
+        "Illegal Dumping": [
+          "removal",
+          "request",
+          "dumping",
+          "chronic"
+        ],
+        "UNSANITARY CONDITION": [
+          "pests",
+          "mold",
+          "storage",
+          "garbage",
+          "recycling",
+          "sewage"
+        ],
+        "Water System": [
+          "water",
+          "dirty",
+          "comments",
+          "use",
+          "leak",
+          "hydrant",
+          "possible",
+          "main"
+        ],
+        "Abandoned Vehicle": [
+          "plate",
+          "license"
+        ],
+        "Blocked Driveway": [
+          "access",
+          "partial"
+        ],
+        "General Construction/Plumbing": [
+          "permit",
+          "building",
+          "structural",
+          "stability",
+          "shaking",
+          "vibrating",
+          "inadequate",
+          "contrary"
+        ],
+        "Taxi Complaint": [
+          "driver",
+          "passenger",
+          "complaint",
+          "non",
+          "vehicle"
+        ],
+        "Building/Use": [
+          "illegal",
+          "conversion",
+          "space",
+          "residential",
+          "building",
+          "occupancy",
+          "certificate",
+          "contrary"
+        ],
+        "Noise - Vehicle": [
+          "truck",
+          "car",
+          "horn",
+          "music",
+          "engine",
+          "idling"
+        ],
+        "Consumer Complaint": [
+          "store",
+          "company",
+          "sales",
+          "tow",
+          "used",
+          "dealer",
+          "tobacco",
+          "car"
+        ],
+        "PLUMBING": [
+          "sink",
+          "basin",
+          "supply",
+          "bathtub",
+          "shower",
+          "water",
+          "toilet",
+          "radiator"
+        ],
+        "Street Light Condition": [
+          "light",
+          "lamppost",
+          "fixture",
+          "luminaire",
+          "hanging",
+          "missing",
+          "dayburning",
+          "knocked"
+        ],
+        "Noise - Street/Sidewalk": [
+          "loud",
+          "talking",
+          "party",
+          "music"
+        ],
+        "Traffic Signal Condition": [
+          "controller",
+          "signal",
+          "veh",
+          "lamp",
+          "pedestrian",
+          "led",
+          "lense",
+          "head"
+        ],
+        "Non-Emergency Police Matter": [
+          "details",
+          "complaint",
+          "trespassing"
+        ],
+        "Sidewalk Condition": [
+          "sidewalk",
+          "broken",
+          "violation",
+          "construction",
+          "blocked",
+          "collapsed",
+          "defective",
+          "ramp"
+        ],
+        "Outdoor Dining": [
+          "setup",
+          "site",
+          "condition",
+          "zone",
+          "restaurant",
+          "unauthorized",
+          "blocked",
+          "barrier"
+        ],
+        "ELECTRIC": [
+          "lighting",
+          "outlet",
+          "switch",
+          "outage",
+          "power",
+          "wiring"
+        ],
+        "Dirty Condition": [
+          "trash",
+          "waste",
+          "dog",
+          "syringes",
+          "dirt",
+          "gravel",
+          "accident",
+          "glass"
+        ],
+        "Lead": [
+          "lead",
+          "kit",
+          "residential",
+          "request"
+        ],
+        "Missed Collection": [
+          "trash",
+          "recycling",
+          "compost",
+          "paper",
+          "rigid",
+          "plastic",
+          "metal",
+          "glass"
+        ],
+        "Animal-Abuse": [
+          "neglected",
+          "tortured",
+          "details",
+          "complaint",
+          "shelter",
+          "chained"
+        ],
+        "Curb Condition": [
+          "curb",
+          "broken",
+          "defacement",
+          "defect-metal",
+          "protruding"
+        ],
+        "WATER LEAK": [
+          "heavy",
+          "flow",
+          "slow",
+          "leak",
+          "damp",
+          "spot"
+        ],
+        "GENERAL": [
+          "bell",
+          "buzzer",
+          "intercom",
+          "cabinet",
+          "cooking",
+          "gas",
+          "system",
+          "ventilation"
+        ],
+        "Sewer": [
+          "comments",
+          "use",
+          "flooding",
+          "catch",
+          "clogged",
+          "basin",
+          "sewer",
+          "backup"
+        ],
+        "For Hire Vehicle Complaint": [
+          "non",
+          "driver",
+          "passenger",
+          "complaint",
+          "company",
+          "service",
+          "car",
+          "report"
+        ],
+        "Noise": [
+          "noise",
+          "construction",
+          "before",
+          "hours",
+          "after",
+          "equipment",
+          "barking",
+          "dog"
+        ],
+        "Street Condition": [
+          "pothole",
+          "cave-in",
+          "construction",
+          "hardware",
+          "rough",
+          "pitted",
+          "roads",
+          "failed"
+        ],
+        "Food Establishment": [
+          "insects",
+          "food",
+          "rodents",
+          "garbage",
+          "contaminated",
+          "letter",
+          "grading",
+          "kitchen"
+        ],
+        "Drug Activity": [
+          "outside",
+          "use",
+          "indoor"
+        ],
+        "SAFETY": [
+          "detector",
+          "carbon",
+          "monoxide",
+          "smoke",
+          "guard",
+          "missing",
+          "fire",
+          "escape"
+        ],
+        "Maintenance or Facility": [
+          "litter",
+          "structure",
+          "outdoors",
+          "garbage",
+          "operation",
+          "unsecured",
+          "facility",
+          "hours"
+        ],
+        "APPLIANCE": [
+          "electric",
+          "range",
+          "gas",
+          "refrigerator"
+        ],
+        "Residential Disposal Complaint": [
+          "secure",
+          "recycling",
+          "trash",
+          "waste",
+          "set",
+          "early",
+          "late",
+          "left"
+        ],
+        "Indoor Air Quality": [
+          "vapors",
+          "gases",
+          "odors",
+          "chemical",
+          "explain",
+          "below",
+          "sewage",
+          "dust"
+        ],
+        "Air Quality": [
+          "air",
+          "fumes",
+          "odor",
+          "idling",
+          "vehicle",
+          "smoke",
+          "vehicular",
+          "demolition"
+        ],
+        "Graffiti": [
+          "graffiti",
+          "police",
+          "requested",
+          "report"
+        ],
+        "New Tree Request": [
+          "address"
+        ],
+        "Damaged Tree": [
+          "fallen",
+          "branch",
+          "limb",
+          "tree",
+          "fall",
+          "cracked",
+          "entire",
+          "uprooted"
+        ],
+        "Dead Animal": [
+          "cat",
+          "mouse",
+          "raccoon",
+          "rat",
+          "squirrel",
+          "bird",
+          "opossum",
+          "dog"
+        ],
+        "Vendor Enforcement": [
+          "vendor",
+          "food",
+          "non-food"
+        ],
+        "Street Sign - Dangling": [
+          "unknown",
+          "stop",
+          "name",
+          "standing",
+          "stopping",
+          "speed",
+          "limit",
+          "intersection"
+        ],
+        "Obstruction": [
+          "cone",
+          "merchandise",
+          "recycling",
+          "trash",
+          "weeds",
+          "grass",
+          "sign",
+          "display"
+        ],
+        "Overgrown Tree/Branches": [
+          "hitting",
+          "lines",
+          "dead",
+          "branches",
+          "phone",
+          "cable",
+          "tree",
+          "power"
+        ],
+        "Street Sweeping Complaint": [
+          "sweeping",
+          "inadequate",
+          "swept"
+        ],
+        "Root/Sewer/Sidewalk Condition": [
+          "trees",
+          "sidewalks",
+          "program"
+        ],
+        "Real Time Enforcement": [
+          "without",
+          "occupied",
+          "dwelling",
+          "work",
+          "multiple",
+          "permit"
+        ],
+        "Dead/Dying Tree": [
+          "planted",
+          "years",
+          "ago",
+          "less"
+        ]
+      }
+    }
+  },
+  "scenarios": [
+    {
+      "scenario": "Severe winter storm (uses Jan 2024 storm uplift)",
+      "dates": "2025-01-09..2025-01-10",
+      "based_on": "Jan 2024 coastal storm (heavy rain and flooding)",
+      "measured_uplift_pct": 8.7,
+      "base_demand_same_weekday_last_year": 18564,
+      "overlay_forecast_low": 18881,
+      "overlay_forecast": 20177,
+      "overlay_forecast_high": 21473
+    },
+    {
+      "scenario": "Severe thunderstorm week (uses Jul 2024 storm uplift)",
+      "dates": "2025-07-14..2025-07-18",
+      "based_on": "Jul 2024 severe thunderstorms",
+      "measured_uplift_pct": -3.1,
+      "base_demand_same_weekday_last_year": 47558,
+      "overlay_forecast_low": 43716,
+      "overlay_forecast": 46094,
+      "overlay_forecast_high": 48472
+    }
+  ],
+  "train_window": "2023-01-01..2024-09-30",
+  "test_window": "2024-10-01..2024-12-31 (92 days)"
+}

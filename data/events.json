@@ -1,0 +1,48 @@
+{
+  "events": [
+    {
+      "end": "2024-01-10",
+      "name": "Jan 2024 coastal storm (heavy rain and flooding)",
+      "note": "Major coastal storm brought heavy rain and flooding to NYC on Jan 9-10, 2024.",
+      "start": "2024-01-09"
+    },
+    {
+      "end": "2024-02-13",
+      "name": "Feb 2024 snowstorm",
+      "note": "Snowstorm dropped several inches across NYC on Feb 13, 2024.",
+      "start": "2024-02-13"
+    },
+    {
+      "end": "2024-07-16",
+      "name": "Jul 2024 severe thunderstorms",
+      "note": "Severe thunderstorms crossed the NYC area on Jul 16, 2024.",
+      "start": "2024-07-16"
+    },
+    {
+      "end": "2024-08-09",
+      "name": "Remnants of Hurricane Debby",
+      "note": "Remnants of Hurricane Debby brought heavy rain to NYC on Aug 9, 2024.",
+      "start": "2024-08-09"
+    },
+    {
+      "end": "2024-11-09",
+      "name": "Nov 2024 wildfire smoke",
+      "note": "Smoke from the Jennings Creek wildfire reached the NYC area Nov 8-9, 2024.",
+      "start": "2024-11-08"
+    }
+  ],
+  "scenarios": [
+    {
+      "based_on": "Jan 2024 coastal storm (heavy rain and flooding)",
+      "end": "2025-01-10",
+      "name": "Severe winter storm (uses Jan 2024 storm uplift)",
+      "start": "2025-01-09"
+    },
+    {
+      "based_on": "Jul 2024 severe thunderstorms",
+      "end": "2025-07-18",
+      "name": "Severe thunderstorm week (uses Jul 2024 storm uplift)",
+      "start": "2025-07-14"
+    }
+  ]
+}
